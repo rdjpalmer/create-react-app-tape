@@ -1,15 +1,14 @@
 import React from 'react';
-// import { createRenderer } from 'react-addons-test-utils';
 import createComponent from 'react-unit';
 import tape from 'tape';
 import addAssertions from 'extend-tape';
 import jsxEquals from 'tape-jsx-equals';
 const test = addAssertions(tape, {jsxEquals});
 
-import Button from '../Button';
+import ComposedExample from '../ComposedExample';
 
-test('Button', t => {
-  const component = createComponent.shallow(<Button>lol</Button>);
+test('ComposedExample', t => {
+  const component = createComponent.shallow();
   t.ok(component, 'renders without blowing up');
   t.end();
 });
