@@ -1,9 +1,7 @@
 # `create-react-app` + `tape` test runner
 
-Addition of tape as a test runner to `create-react-app`'s ejected output. Major caveat is that `babel-tape-runner` requires configuration to live in `.babelrc`. Therefore it cannot read from `create-react-app`'s generated configuration files.
+Example implementation of `create-react-app`, post `eject` with the tape test runner.
 
-Choices here are:
+Uses `tape`, `react-unit`, `extend-tape`, `tape-jsx-equal` and a few of other dependancies to work.
 
-1. Move all babel configuration into `.babelrc` (requires exploration)
-2. Live with duplication configurations
-3. ????
+A small draw back is `babel-tape-runner`'s dependancy on `.babelrc`, however this is circumvented by importing this directly into `babel.dev.js` and `babel.prod.js`.
