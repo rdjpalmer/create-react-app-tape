@@ -1,11 +1,11 @@
+var fs = require('fs');
+var path = require('path');
+var rc = JSON.parse(fs.readFileSync(path.join(__dirname, '../.babelrc'), 'utf8'));
+
 module.exports = {
   babelrc: false,
   cacheDirectory: true,
-  presets: [
-    'babel-preset-es2015',
-    'babel-preset-es2016',
-    'babel-preset-react'
-  ].map(require.resolve),
+  presets: rc.presets.map(require.resolve),
   plugins: [
     'babel-plugin-syntax-trailing-function-commas',
     'babel-plugin-transform-class-properties',

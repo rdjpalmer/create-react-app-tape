@@ -10,6 +10,7 @@ import Button from '../Button';
 
 test('Button', t => {
   const component = createComponent.shallow(<Button>lol</Button>);
+  console.log(component);
   t.equal(true, true);
   t.end();
 });
