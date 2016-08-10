@@ -41,8 +41,8 @@
     "postcss-loader": "0.9.1",
     "promise": "7.1.1",
     "react-addons-test-utils": "^15.3.0",
-    "react-unit": "^1.3.4",
     "rimraf": "2.5.4",
+    "skin-deep": "^1.0.0-alpha1",
     "style-loader": "0.13.1",
     "tape": "^4.6.0",
     "tape-jsx-equals": "^1.0.0",
@@ -56,7 +56,8 @@
     "react-dom": "^15.2.1"
   },
   "scripts": {
-    "test": "babel-tape-runner **/__tests__/*.js | faucet",
+    "test:pretty": "babel-tape-runner **/__tests__/*.js | faucet",
+    "test": "babel-tape-runner **/__tests__/*.js",
     "start": "node ./scripts/start.js",
     "build": "node ./scripts/build.js"
   },
